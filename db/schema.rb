@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2020_02_20_192700) do
 
   create_table "pokemons", force: :cascade do |t|
     t.string "name"
-    t.string "type"
+    t.string "poke_type"
   end
 
   create_table "trainers", force: :cascade do |t|

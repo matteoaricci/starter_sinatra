@@ -1,0 +1,11 @@
+<!DOCTYPE>
+<html>
+    <h1>List of Known Pokemon!</h1>
+    <ul>
+    <% Pokemon.all.each do |poke| %>
+        <li>
+        <%= poke.name %>
+        </li>
+    <% end %>
+    </ul>
+</html>

@@ -1,7 +1,7 @@
 require_relative './config/environment'
 
-Rack Mthod
+Rack::MethodOverride
 
-use
-use
+use PokemonController
+use TrainerController
 run ApplicationController
