@@ -10,7 +10,8 @@
     <a href="/pokemons/<%=@pokemon.id%>/edit">Make Some Edits Here</a><br>
     <br>
     <div>
-    <a href="/pokemons">Go Back Home</a>
+    <a href="/pokemons">Go To Pokemon Index</a>
+    <a href="/">Go To Home Page</a>
     </div>
     <form action="/pokemons/<%=@pokemon.id%>" method="POST">
     <input type="hidden" value="DELETE" name="_method">

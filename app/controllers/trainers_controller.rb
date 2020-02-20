@@ -1,4 +1,4 @@
-class TrainerController < Sinatra::Base
+class TrainersController < Sinatra::Base
     set(:views, "app/views/trainer")
     set :method_override, true
 
@@ -8,7 +8,7 @@ class TrainerController < Sinatra::Base
     end
 
     get '/trainers/new' do 
-        
+
         erb :new 
     end
 
@@ -36,5 +36,9 @@ class TrainerController < Sinatra::Base
         redirect "/trainers/#{trainer.id}"
     end
 
-    delete 
+    delete '/trainers/:id' do
+        @trainer = Trainer.find(params[:id])
+        @trainer.delete
+        redirect '/trainers'
+    end
 end

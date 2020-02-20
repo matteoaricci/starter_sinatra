@@ -1,4 +1,4 @@
-class PokemonController < Sinatra::Base
+class PokemonsController < Sinatra::Base
     set(:views, "app/views/pokemon")
     set :method_override, true
 

@@ -2,6 +2,7 @@ require_relative './config/environment'
 
 Rack::MethodOverride
 
-use PokemonController
-use TrainerController
+use PokemonsController
+use TrainersController
+use PartiesController
 run ApplicationController

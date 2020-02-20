@@ -7,5 +7,18 @@
         <h1><%=@trainer.name%></h1>
         <h2><%=@trainer.catchphrase%></h2>
     </body>
+
+    <a href="/trainers/<%=@trainer.id%>/edit">Edit This Trainer</a><br>
+    <br>
+    <a href="/trainers">Go To Trainer Index</a><br>
+    <a href="/">Go To Home Page</a>
+    
+
+    <form action="/trainers/<%=@trainer.id%>" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <p></p>
+    <input type="submit" value="Delete it I guess.">
+
+    </form>
 </html>
 
