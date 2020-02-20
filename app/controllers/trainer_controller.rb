@@ -11,4 +11,30 @@ class TrainerController < Sinatra::Base
         
         erb :new 
     end
+
+    post '/trainers' do
+        trainer = Trainer.create(name: params[:name])
+
+        redirect '/trainers'
+    end
+
+    get '/trainers/:id' do
+        @trainer = Trainer.find(params[:id])
+
+        erb :show
+    end
+
+    get '/trainers/:id/edit' do
+        @trainer = Trainer.find(params[:id])
+
+        erb :edit
+    end
+
+    patch '/trainers/:id' do
+        trainer = Trainer.find(params[:id])
+        trainer.update(name: params[:name], catchphrase: params[:catchphrase])
+        redirect "/trainers/#{trainer.id}"
+    end
+
+    delete 
 end

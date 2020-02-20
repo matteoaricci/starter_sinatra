@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Your Trainer</title>
+</head>
+<body>
+    <form method="POST" action="/trainers/<%=@trainer.id%>">
+        <input type="hidden" name="_method" value="PATCH">
+        <label for="name">Name</label>
+        <input type="text" name="name" placeholder="<%=@trainer.name%>">
+        <label for="catchphrase">Catchphrase</label>
+        <input type="text" name="catchphrase" placeholder="<%=@trainer.catchphrase%>">
+        <input type="submit" value="OOOH yeah you should edit">
+    </form>
+</body>
+</html>
