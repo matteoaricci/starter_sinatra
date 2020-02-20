@@ -1,4 +1,8 @@
 <!DOCTYPE>
 <html>
-    <form action=""
+    <form method="POST" action="/parties">
+    <select name="pick_trainer">
+        <% Trainer.all.each do |train| %>
+            <option value="<%=train.id%>"> <%= train.name %> </option>
+        <% end %> 
 </html>
