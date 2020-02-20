@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Edit Pokedex Entry</title>
+    </head>
+    <body>
+        <form method="POST" action="/pokemons/<%=@pokemon.id%>">
+            <input type="hidden" name="_method" value="PATCH">
+            <label for="name">Name: </label>
+            <input type="text" name="name" placeholder="<%=@pokemon.name%>">
+            <label for="poke_type">Pokemon Type: </label>
+            <input type="text" name="poke_type" placeholder="<%=@pokemon.poke_type%>">
+            <input type="submit" value="Think carefully about your edit.">
+
+        </form>
+    </body>
+</html>
