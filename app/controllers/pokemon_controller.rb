@@ -18,20 +18,26 @@ class PokemonController < Sinatra::Base
     end
 
     get '/pokemons/:id' do
-        @pokemon = Pokemon.all.find(params[:id])
+        @pokemon = Pokemon.find(params[:id])
 
         erb :show
     end
 
     get '/pokemons/:id/edit' do
-        @pokemon = Pokemon.all.find(params[:id])
+        @pokemon = Pokemon.find(params[:id])
         erb :edit
     end
 
     patch '/pokemons/:id' do
-        pokemon = Pokemon.all.find(params[:id])
+        pokemon = Pokemon.find(params[:id])
         pokemon.update(name: params[:name], poke_type: params[:poke_type])
         redirect "/pokemons/#{pokemon.id}"
+    end
+
+    delete '/pokemons/:id' do 
+        @pokemon = Pokemon.find(params[:id])
+        @pokemon.delete 
+        redirect '/pokemons'
     end
 
 end

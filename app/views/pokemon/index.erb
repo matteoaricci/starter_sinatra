@@ -4,7 +4,9 @@
     <ul>
     <% Pokemon.all.each do |poke| %>
         <li>
+        <a href="/pokemons/<%=poke.id%>">
         <%= poke.name %>
+        </a>
         </li>
     <% end %>
     </ul>

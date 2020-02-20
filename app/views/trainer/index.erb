@@ -1,0 +1,16 @@
+<!DOCTYPE>
+<html>
+
+
+<body>
+<h1>All the Trainers!</h1>
+
+    <ul>
+    <% Trainer.all.each do |train| %>
+        <li>
+        <%= train.name %>
+        </li>
+    <% end %>
+    </ul>
+</body>
+</html>

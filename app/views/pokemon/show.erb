@@ -7,4 +7,14 @@
         <h1>Species: <%=@pokemon.name%></h1>
         <h2>Type: <%=@pokemon.poke_type%></h2>
     </body>
+    <a href="/pokemons/<%=@pokemon.id%>/edit">Make Some Edits Here</a><br>
+    <br>
+    <div>
+    <a href="/pokemons">Go Back Home</a>
+    </div>
+    <form action="/pokemons/<%=@pokemon.id%>" method="POST">
+    <input type="hidden" value="DELETE" name="_method">
+    <p></p>
+    <input type="submit" value="You really wanna delete this?????">
+    </form>
 </html>
